@@ -14,12 +14,20 @@ export default function LoginPage(){
 
   useEffect(() => {
     (async () => {
-      
+      //
     })();
   }, []);
 
   async function onFormSubmit(e) {
     e.preventDefault();
+
+    const data = new FormData(e.target);
+
+    const exampleArr1 = ["ahmet", "mehmet", "ali", "veli"];
+    const exampleArr2 = new Array();
+    exampleArr2.push();
+    exampleArr1.push();
+    exampleArr1[1];
 
     const formJson = Object.fromEntries(data.entries());
 
@@ -28,13 +36,12 @@ export default function LoginPage(){
     if (loginResult.data.status === "success") {
       dispatch(setToken(loginResult.data.data.token))
       dispatch(setUser(loginResult.data.data.userData))
+
       navigate("/user");
     } else {
       alert("Lütfen bilgilerinizi kontrol ediniz")
     }
   }
-
-  console.log
 
     return(
     <>
@@ -44,8 +51,8 @@ export default function LoginPage(){
       <Form.Group className="mb-3" controlId="loginForm.email">
         <Form.Label>Email address</Form.Label>
         <Form.Control 
-        onChange={e => {
-          e.target.value
+        onChange={(e) => {
+          e.target.value;
         }}
         type="email" 
         name="email" 

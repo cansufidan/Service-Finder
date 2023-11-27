@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/theme-context";
 
 export default function Footer() {
-  const categoryState = useSelector(state => state.categoryState)
+  const categoryState = useSelector((state) => state.categoryState);
   const themeContextValue = useContext(ThemeContext)
 
     return (

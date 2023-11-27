@@ -7,7 +7,7 @@ import ServiceSingle from "../../components/service-single";
 export default function CategoryDetailPage() {
     const params = useParams();
     const api = useApi();
-    const [categoryDetail, setCategoryDetail] = useState(null)
+    const [categoryDetail, setCategoryDetail] = useState(null);
 
     useEffect(() => {
         if(categoryDetail !== null) {
@@ -41,7 +41,6 @@ export default function CategoryDetailPage() {
     </div>
     </>
     ) : null}
-
     {categoryDetail.services.length > 0 ? (
         <>
         <h1>Services</h1>
@@ -52,8 +51,6 @@ export default function CategoryDetailPage() {
     </div>
         </>
     ) : null}
-
-
     <br/>
     slug: {params.slug}
     </>

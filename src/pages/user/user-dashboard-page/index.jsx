@@ -2,7 +2,8 @@ import { Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux"
 
 export default function UserDashboardPage(){
-    const authState = useSelector(state => state.authState);
+    const authState = useSelector((state) => state.authState);
+    
     return (
         <>
         <main>
